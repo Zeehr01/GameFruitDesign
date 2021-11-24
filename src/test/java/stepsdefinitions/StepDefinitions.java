@@ -1,4 +1,4 @@
-package hlgamemav;
+package stepsdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,7 +7,15 @@ import io.cucumber.java.en.When;
 import java.util.ArrayList;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import hlgamemav.Color;
+import hlgamemav.Game;
+import hlgamemav.Lobby;
+import hlgamemav.Platform;
+import hlgamemav.Player;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class StepDefinitions {
     private Exception exception;
@@ -156,7 +164,7 @@ public class StepDefinitions {
     public void theRankingShouldContainEveryPlayersWithTheirScore() {
         for (Map.Entry<String, Integer> map : ranking.entrySet()) {
             assertEquals("Jean", map.getKey());
-            assertEquals(0, map.getValue());
+            assertEquals("0", map.getValue());
         }
     }
 
